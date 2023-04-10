@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cafe.css">
+    <title>Cafe</title>
+</head>
+
+<body>
+
+    <section id="section">
+        <div class="circle"></div>
+        <header id="header">
+        <a href="#"><img src="Assets/logo.png" class="logo"></a>
+
+        <div class="toggle" onclick="toggleMenu();"></div>
+        
+            <ul class="navigation">
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Novedades</a></li>
+                <li><a href="">Contacto</a></li>
+
+            </ul>
+     
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>No es solo un cafe <br>Es <span id="span">una Experiencia</span></h2>
+
+                <p >¡Bienvenidos a nuestra cafetería! Somos un lugar acogedor y relajado, perfecto para tomar un buen
+                    café y disfrutar de un rato agradable. Ofrecemos una amplia variedad de bebidas, desde espresso
+                    hasta lattes y frappés, y también tenemos opciones de té y bebidas frías.
+
+                    Pero no solo somos una cafetería, también servimos deliciosos panecillos y pasteles recién horneados
+                    todos los días. ¡Prueba nuestro famoso croissant de almendra o nuestro muffin de arándanos!
+                </p>
+
+                <a href="#">Leer más</a>
+            </div>
+            <div class="imgBox">
+
+                <img src="Assets/img1.png" class="starbucks">
+
+            </div>
+
+
+
+
+        </div>
+
+        <ul class="thumb">
+
+
+            <li><img src="Assets/thumb1.png" onclick="imgSlider ('Assets/img1.png');changeCircleColor('#b45f06')"></li>
+            <li><img src="Assets/thumb2.png" onclick="imgSlider('Assets/img2.png') ;changeCircleColor('#edd3b7')"></li>
+            <li><img src="Assets/thumb3.png" onclick="imgSlider('Assets/img3.png');changeCircleColor('#744700')"></li>
+        </ul>
+
+        </ul>
+
+        <ul class="sci">
+            <li> <a href="#"> <img src="Assets/facebook.png" alt=""></a></li>
+            <li> <a href="#"> <img src="Assets/instagram.png" alt=""></a></li>
+            <li> <a href="#"> <img src="Assets/twitter.png" alt=""></a></li>
+
+
+        </ul>
+
+       
+
+    </section>
+
+    <footer class="footer">
+        <p>Derechos de autor © 2023 ML</p>
+       <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        
+      </footer>
+
+   
+
+    <script  type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color; 
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle ('active')
+            navigation.classList.toggle ('active')
+        }
+        </script>
+</script>
+
+
+
+</body>
+
+</html>
